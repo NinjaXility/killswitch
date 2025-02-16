@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ks",
+  "version": "${version}",
+  "name": "KillSwitch",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/ks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.that_one_lt.ks.client.KsClient"
+    ],
+    "main": [
+      "me.that_one_lt.ks.Ks"
+    ]
+  },
+  "mixins": [
+    "ks.mixins.json",
+    {
+      "config": "ks.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
